@@ -1,0 +1,15 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+h1 {
+    border-bottom: 3px dashed #cccccc;
+}
+
+h2 {
+    margin-top: 10px !important;
+    margin-bottom: 10px !important;
+    border-bottom: 1px solid #cccccc;
+}

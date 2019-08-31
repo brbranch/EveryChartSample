@@ -1,0 +1,28 @@
+import {SelectOption} from "../common/forms/selectfield";
+
+export const categories : SelectOption[] = [
+    { value: "none", label: "その他・カテゴリなし" },
+    { value: "entertainment", label: "エンターテイメント" },
+    { value: "cinematography", label: "映画・ビデオ・動画" },
+    { value: "tv", label: "テレビ" },
+    { value: "book", label: "本・書籍" },
+    { value: "comic", label: "コミック" },
+    { value: "anime", label: "アニメ" },
+    { value: "internet", label: "インターネット" },
+    { value: "music", label: "音楽" },
+    { value: "talent", label: "有名人" },
+    { value: "computer", label: "コンピューター" },
+    { value: "game", label: "ゲーム/スマホゲーム" },
+    { value: "app", label: "アプリ" },
+    { value: "life", label: "生活全般" },
+    { value: "fashion", label: "ファッション" },
+    { value: "beauty", label: "美容" },
+    { value: "cooking", label: "料理" },
+    { value: "food", label: "食事・お店" },
+    { value: "accessories", label: "アクセサリー" },
+    { value: "self", label: "日記・自己紹介" },
+    { value: "hobby", label: "趣味全般" },
+    { value: "animal", label: "ペット・生き物" },
+    { value: "photo", label: "写真" },
+    { value: "car", label: "車・バイク" },
+];

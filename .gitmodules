@@ -1,0 +1,3 @@
+[submodule "backend/src/project/client/foon"]
+	path = backend/src/project/client/foon
+	url = https://github.com/brbranch/foon

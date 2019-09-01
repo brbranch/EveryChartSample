@@ -1,0 +1,38 @@
+application: testproject
+module: default
+version: develop
+runtime: go
+api_version: go1.9
+threadsafe: true
+handlers:
+- url: /static
+  static_dir: static
+  secure: always
+- url: /.*
+  script: _go_app
+
+skip_files:
+- (.*/)?pkg/(.*/)?
+- (.*/)?front/(.*/)?
+- (.*/)?transport/(.*/)?
+- (.*/)?vendor/(.*/)?
+- (.*/)?testutil/(.*)?
+- (.*/)?golang\.org/(.*/)?
+- (.*/)?google\.golang\.org/(.*/)?
+
+automatic_scaling:
+  max_concurrent_requests: 40
+  min_idle_instances: 0
+  max_idle_instances: 1
+  max_pending_latency: automatic
+  min_pending_latency: 3000ms
+env_variables:
+  LEVEL: "TRACE"
+  ENVIRONMENT: "local"
+  TWITTER_AUTH_TOKEN: "Twitter API Credential Token"
+  TWITTER_AUTH_SECRET: "TwitterAuth Secret"
+  FIRESTORE_EMULATOR_HOST: "localhost:8915"
+  HOSTNAME: "127.0.0.1:8080"
+  SESSION_SEED: "c71dca89fd097a2206532f957c791f40f5f3ad166120779c9ab68fd27acce6cf"
+  BUCKET: "GCS bucket ID"
+  GCSPATH: "GCS directory name"

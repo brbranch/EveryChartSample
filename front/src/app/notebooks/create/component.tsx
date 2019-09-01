@@ -304,7 +304,7 @@ export const Component: React.FC<Own> = (props: Own) => {
                     大人向けの内容を扱う場合には、大人向け(R18)の設定をお願いします。
                 </Notice>
 
-                <Box textAlign="center">
+                <Box>
                     <Button variant="contained" disabled={props.disable} color="secondary" className={classes.button} onClick={onClick}>
                         {buttonName}
                     </Button>

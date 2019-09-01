@@ -1,0 +1,47 @@
+{{ define "css" }}{{ end }}
+{{ define "script" }}{{ end }}
+{{ define "contents" }}{{ end }}
+
+{{ define "base" }}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta content="width=device-width,initial-scale=1" name="viewport" />
+    <link rel="canonical" href="https://everychart.site" />
+    <link rel="icon" href="/static/images/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/static/images/apple-touch-icon-180x180.png">
+    <meta name="description" content="{{.Desc}}" />
+    <meta name="twitter:title" content="{{.CardTitle}}" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="{{.CardImage}}" />
+    <meta name="twitter:image:alt" content="EveryChart" />
+    <meta name="twitter:description" content="{{.Desc}}" />
+    <meta name="twitter:url" content="{{.Url}}" />
+    <meta name="twitter:site" content="@everychart" />
+    <meta name="twitter:domain" content="everychart.site" />
+
+    <meta property="og:site_name" content="EveryChart"/>
+    <meta property="og:type" content="{{.OgType}}" />
+    <meta property="og:title" content="{{.CardTitle}}" />
+    <meta property="og:description" content="{{.Desc}}" />
+    <meta property="og:url" content="{{.Url}}" />
+    <meta property="og:image" content="{{.CardImage}}" />
+    <meta property="og:image:alt" content="EveryChart -なんでもチャートでランク付け-" />
+    <meta property="og:locale" content="ja_JP" />
+
+    <meta name="keywords" content="チャート, 評価, 口コミ, Twitter" />
+    <meta name="robots" content="noarchive" />
+    <meta name="copyright" content="Copyright &amp;copy; EveryChart All right reserved." />
+    <meta charset="utf-8"/>
+    <title>{{ .Title }}</title>
+</head>
+<body>
+    <div id="app"></div>
+    {{ template "contents" .Data }}
+    <script id="data-sessionId" type="text/plain" data-json='{{.SessionID}}'></script>
+    <script id="data-commentId" type="text/plain" data-json='{{.CommentID}}'></script>
+    <script id="data-loginImage" type="text/plain" data-json='{{.Image}}'></script>
+    <script src="/static/js/bundle.js"></script>
+</body>
+</html>
+{{ end }}

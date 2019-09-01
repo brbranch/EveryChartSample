@@ -17,6 +17,7 @@ EveryChart( https://www.everychart.site ) のリリース前のソースコー�
 
 ### 最初だけ行う
 ```bash
+$ git submodule update --init --recursive
 $ cd ./backend
 $ direnv allow // direnvを有効にする
 $ cd ./src/project

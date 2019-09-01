@@ -54,7 +54,7 @@ func (t *TwitterAuth) GetAuthUrl(anonymousId string) (string, error) {
 	client := urlfetch.Client(t.Context)
 	host := t.Context.Request().URL.Host
 	schema := "https"
-	url := fmt.Sprintf("%s://%s/callbacks/twitter", schema, host)
+	url := fmt.Sprintf("%s://%s/authc/twitter", schema, host)
 	if os.Getenv("ENVIRONMENT") == "local" {
 		schema = "http"
 		url = "http://127.0.0.1:8080/authc/twitter"

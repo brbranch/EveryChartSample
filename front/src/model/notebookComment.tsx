@@ -19,7 +19,8 @@ export interface NotebookComment {
     isLike: boolean,
     comment: string,
     disabled: boolean,
-    created: number
+    created: number,
+    hasComment: boolean,
     isNew: boolean
 }
 
@@ -57,6 +58,11 @@ export class NotebookCommentModel {
 
     parent(): NotebookPage {
         return this.page;
+    }
+
+    changeComment(comment: string) {
+        this.comment.comment = comment;
+        this.comment.hasComment = this.hasComment();
     }
 
     update(callback: (comment: NotebookComment, error: FetchError) => void): void {
@@ -163,6 +169,7 @@ export function createNotebookComment(): NotebookComment {
         comment: '',
         disabled: false,
         created: 0,
+        hasComment: false,
         isNew: true
     }
 }

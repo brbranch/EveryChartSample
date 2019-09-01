@@ -245,7 +245,7 @@ export const Component: React.FC<OwnProps> = (props: OwnProps) => {
         if(props.backPath.length) {
             if(props.backPath === 'back') {
                 return (
-                    <Button onClick={e => {
+                    <Button onClick={(e: any) => {
                         history.back();
                     }} className={classes.back} aria-label="Add">
                         <BackIcon/>
